@@ -1,0 +1,263 @@
+{
+  "session_id": "a06a8c87",
+  "task_count": 7,
+  "flagged_count": 4,
+  "pass_count": 3,
+  "overall_session_score": 7.29,
+  "session_verdict": "WARN",
+  "evaluations": [
+    {
+      "task_name": "Exploratory Data Analysis (EDA) - Age Distribution",
+      "overall_score": 8,
+      "flagged": true,
+      "flag_reasons": [
+        "output_completeness scored 2/10: Only column names are shown; no distribution or analysis provided."
+      ],
+      "dimensions": [
+        {
+          "name": "statistical_validity",
+          "score": 8,
+          "reasoning": "The output shows column names but lacks statistical analysis.",
+          "flagged": false
+        },
+        {
+          "name": "hallucination_risk",
+          "score": 9,
+          "reasoning": "No data or analysis suggests no false information introduced.",
+          "flagged": false
+        },
+        {
+          "name": "data_leakage",
+          "score": 10,
+          "reasoning": "No additional or external data is used, so no leakage risk.",
+          "flagged": false
+        },
+        {
+          "name": "output_completeness",
+          "score": 2,
+          "reasoning": "Only column names are shown; no distribution or analysis provided.",
+          "flagged": true
+        }
+      ],
+      "recommendation": "Perform statistical analysis and visualization of the 'age' distribution.",
+      "llm_available": true,
+      "evaluated_at": "2026-05-06T12:05:35Z"
+    },
+    {
+      "task_name": "Exploratory Data Analysis (EDA) - BMI Distribution",
+      "overall_score": 8,
+      "flagged": false,
+      "flag_reasons": [],
+      "dimensions": [
+        {
+          "name": "statistical_validity",
+          "score": 8,
+          "reasoning": "The output shows relevant columns but lacks summary statistics or visual analysis.",
+          "flagged": false
+        },
+        {
+          "name": "hallucination_risk",
+          "score": 9,
+          "reasoning": "No code is provided to verify the results, introducing some risk.",
+          "flagged": false
+        },
+        {
+          "name": "data_leakage",
+          "score": 10,
+          "reasoning": "No transformations or modeling steps suggest potential leakage.",
+          "flagged": false
+        },
+        {
+          "name": "output_completeness",
+          "score": 6,
+          "reasoning": "Only column names are shown; histogram and analysis details are missing.",
+          "flagged": false
+        }
+      ],
+      "recommendation": "Provide code for generating the histogram and include summary statistics.",
+      "llm_available": true,
+      "evaluated_at": "2026-05-06T12:05:42Z"
+    },
+    {
+      "task_name": "Exploratory Data Analysis (EDA) - Smoker vs Diabetes",
+      "overall_score": 6,
+      "flagged": true,
+      "flag_reasons": [
+        "output_completeness scored 2/10: Only column names are displayed; no EDA results or insights provided."
+      ],
+      "dimensions": [
+        {
+          "name": "statistical_validity",
+          "score": 5,
+          "reasoning": "The output shows column names but lacks actual analysis or statistics.",
+          "flagged": false
+        },
+        {
+          "name": "hallucination_risk",
+          "score": 8,
+          "reasoning": "No analysis performed, so no risk of incorrect conclusions based on data.",
+          "flagged": false
+        },
+        {
+          "name": "data_leakage",
+          "score": 10,
+          "reasoning": "No additional datasets or features are used, so no leakage risk.",
+          "flagged": false
+        },
+        {
+          "name": "output_completeness",
+          "score": 2,
+          "reasoning": "Only column names are displayed; no EDA results or insights provided.",
+          "flagged": true
+        }
+      ],
+      "recommendation": "Perform statistical tests and visualizations to compare smokers and non-smokers with diabetes.",
+      "llm_available": true,
+      "evaluated_at": "2026-05-06T12:05:49Z"
+    },
+    {
+      "task_name": "Feature Engineering - Create BMI Categories",
+      "overall_score": 7,
+      "flagged": true,
+      "flag_reasons": [
+        "output_completeness scored 2/10: The output does not show the expected BMI categories and only lists column names."
+      ],
+      "dimensions": [
+        {
+          "name": "statistical_validity",
+          "score": 8,
+          "reasoning": "The output shows columns that are relevant but does not indicate if BMI categories were created.",
+          "flagged": false
+        },
+        {
+          "name": "hallucination_risk",
+          "score": 7,
+          "reasoning": "There is a risk as the task description suggests creating BMI categories which are not shown in the output.",
+          "flagged": false
+        },
+        {
+          "name": "data_leakage",
+          "score": 10,
+          "reasoning": "No additional files or data manipulations suggest any leakage issues.",
+          "flagged": false
+        },
+        {
+          "name": "output_completeness",
+          "score": 2,
+          "reasoning": "The output does not show the expected BMI categories and only lists column names.",
+          "flagged": true
+        }
+      ],
+      "recommendation": "Create BMI categories based on the 'bmi' column and include them in the output.",
+      "llm_available": true,
+      "evaluated_at": "2026-05-06T12:05:57Z"
+    },
+    {
+      "task_name": "Model Evaluation - Train-Test Split",
+      "overall_score": 8,
+      "flagged": false,
+      "flag_reasons": [],
+      "dimensions": [
+        {
+          "name": "statistical_validity",
+          "score": 8,
+          "reasoning": "No statistical errors identified, but no evaluation metrics are shown.",
+          "flagged": false
+        },
+        {
+          "name": "hallucination_risk",
+          "score": 7,
+          "reasoning": "SettingWithCopyWarning suggests potential issues with data manipulation, though not clear without full code.",
+          "flagged": false
+        },
+        {
+          "name": "data_leakage",
+          "score": 9,
+          "reasoning": "No indication of leakage, but no details on feature engineering or preprocessing are provided.",
+          "flagged": false
+        },
+        {
+          "name": "output_completeness",
+          "score": 7,
+          "reasoning": "Only column names and dataset save actions are shown; no model training or evaluation results.",
+          "flagged": false
+        }
+      ],
+      "recommendation": "Provide model performance metrics and ensure data manipulation is safe.",
+      "llm_available": true,
+      "evaluated_at": "2026-05-06T12:06:04Z"
+    },
+    {
+      "task_name": "Model Evaluation - Cross-Validation",
+      "overall_score": 7,
+      "flagged": false,
+      "flag_reasons": [],
+      "dimensions": [
+        {
+          "name": "statistical_validity",
+          "score": 7,
+          "reasoning": "Cross-validation scores are provided but lack statistical significance and interpretation.",
+          "flagged": false
+        },
+        {
+          "name": "hallucination_risk",
+          "score": 8,
+          "reasoning": "No data or code is shown, so there's a risk of misinterpretation without context.",
+          "flagged": false
+        },
+        {
+          "name": "data_leakage",
+          "score": 9,
+          "reasoning": "No data or code is provided to check for leakage, but the task name suggests no issues.",
+          "flagged": false
+        },
+        {
+          "name": "output_completeness",
+          "score": 4,
+          "reasoning": "Only cross-validation scores are shown; index and model details missing.",
+          "flagged": false
+        }
+      ],
+      "recommendation": "Provide full code and detailed interpretation of cross-validation results.",
+      "llm_available": true,
+      "evaluated_at": "2026-05-06T12:06:11Z"
+    },
+    {
+      "task_name": "Model Evaluation - Confusion Matrix",
+      "overall_score": 7,
+      "flagged": true,
+      "flag_reasons": [
+        "output_completeness scored 2/10: The output does not provide a confusion matrix or any evaluation metrics."
+      ],
+      "dimensions": [
+        {
+          "name": "statistical_validity",
+          "score": 8,
+          "reasoning": "The output shows feature names rather than a confusion matrix.",
+          "flagged": false
+        },
+        {
+          "name": "hallucination_risk",
+          "score": 7,
+          "reasoning": "There is no visual or numerical evaluation of model performance.",
+          "flagged": false
+        },
+        {
+          "name": "data_leakage",
+          "score": 10,
+          "reasoning": "No signs of data leakage detected in the output.",
+          "flagged": false
+        },
+        {
+          "name": "output_completeness",
+          "score": 2,
+          "reasoning": "The output does not provide a confusion matrix or any evaluation metrics.",
+          "flagged": true
+        }
+      ],
+      "recommendation": "Generate and display a confusion matrix for model performance evaluation.",
+      "llm_available": true,
+      "evaluated_at": "2026-05-06T12:06:18Z"
+    }
+  ]
+}
